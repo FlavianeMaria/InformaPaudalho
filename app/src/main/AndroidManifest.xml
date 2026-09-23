@@ -55,14 +55,14 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity3"
+            android:name=".CadastroActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity2"
+            android:name=".LoginActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
