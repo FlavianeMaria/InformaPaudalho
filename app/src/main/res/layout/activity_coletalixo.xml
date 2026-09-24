@@ -8,7 +8,7 @@
     android:backgroundTint="#050505"
     android:outlineAmbientShadowColor="#000000"
     android:outlineSpotShadowColor="#000000"
-    tools:context=".MainActivity8">
+    tools:context=".ColetaLixoActivity">
 
     <ImageView
         android:id="@+id/imageView2"

@@ -13,42 +13,42 @@
         android:theme="@style/Theme.InformaPaudalho"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity9"
+            android:name=".CastraMovelActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity8"
+            android:name=".ColetaLixoActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity7"
+            android:name=".ChatActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity6"
+            android:name=".ReciclagemActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity5"
+            android:name=".CarroSopaActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity4"
+            android:name=".AguaActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

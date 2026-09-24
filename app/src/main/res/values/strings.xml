@@ -4,4 +4,19 @@
     <string name="email">E-mail</string>
     <string name="password">Senha</string>
     <string name="cadastre_se">Cadastre-se</string>
+    <string name="logo">Logo</string>
+    <string name="perfil">Perfil</string>
+    <string name="informa_paudalho">Informa Paudalho</string>
+    <string name="agua">Água</string>
+    <string name="botao_agua">Botão de Água</string>
+    <string name="botao_carro_da_sopa">Botão do Carro da Sopa</string>
+    <string name="carro_da_sopa">Carro da Sopa</string>
+    <string name="botao_reciclagem">Botão Reciclagem</string>
+    <string name="reciclagem">Reciclagem</string>
+    <string name="botao_chat">Botão Chat</string>
+    <string name="chat">Chat</string>
+    <string name="botao_coleta_de_lixo">Botão Coleta de Lixo</string>
+    <string name="coleta_de_lixo">Coleta do Lixo</string>
+    <string name="botao_castramovel">Botão Castramóvel</string>
+    <string name="castramovel">Castramóvel</string>
 </resources>

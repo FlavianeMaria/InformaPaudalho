@@ -7,12 +7,12 @@ import android.widget.PopupMenu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity9 extends AppCompatActivity {
+public class CastraMovelActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main9);
+        setContentView(R.layout.activity_castramovel);
 
         Button btnMenu = findViewById(R.id.btnMenu);
 
@@ -20,7 +20,7 @@ public class MainActivity9 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                PopupMenu menu = new PopupMenu(MainActivity9.this, btnMenu);
+                PopupMenu menu = new PopupMenu(CastraMovelActivity.this, btnMenu);
 
                 menu.getMenu().add("Início");
                 menu.getMenu().add("Perfil");
