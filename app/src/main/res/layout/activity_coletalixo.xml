@@ -1,24 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#050505"
-    android:backgroundTint="#050505"
-    android:outlineAmbientShadowColor="#000000"
-    android:outlineSpotShadowColor="#000000"
+    android:background="@color/fundo_app"
+    android:padding="20dp"
     tools:context=".ColetaLixoActivity">
 
-    <ImageView
-        android:id="@+id/imageView2"
+    <!-- TÍTULO DA TELA -->
+    <TextView
+        android:id="@+id/tvTituloLixo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#050505"
-        android:outlineAmbientShadowColor="#020202"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Coleta de Lixo"
+        android:textColor="@color/texto_app"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSubtituloLixo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Selecione o seu bairro para ver a agenda de coleta:"
+        android:textColor="@color/verde_app"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTituloLixo" />
+
+    <!-- SELETOR DE BAIRROS (SPINNER) -->
+    <Spinner
+        android:id="@+id/spinnerBairrosLixo"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:drawable/btn_dropdown"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/informapaudalho" />
+        app:layout_constraintTop_toBottomOf="@id/tvSubtituloLixo" />
+
+    <!-- CARD COM OS DETALHES DA COLETA -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardDetalhesLixo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"
+        app:cardBackgroundColor="#1A1A1A"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnerBairrosLixo"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvBairroNomeLixo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome do Bairro"
+                android:textColor="@color/texto_app"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvStatusLixo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Status: --"
+                android:textColor="@color/verde_app"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvDataLixo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Dias: --"
+                android:textColor="@color/texto_app"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvHorarioLixo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Horário: --"
+                android:textColor="@color/texto_app"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvTipoLixo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Tipo: --"
+                android:textColor="@color/texto_app"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,9 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fundo_app"
     tools:context=".ChatActivity">
+
+    <!-- BARRA SUPERIOR (TOOLBAR) -->
+    <LinearLayout
+        android:id="@+id/toolbarChat"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#121212"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnVoltarChat"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Voltar"
+            android:scaleType="fitCenter"
+            app:srcCompat="@android:drawable/ic_menu_revert"
+            app:tint="@color/verde_app" />
+
+        <ImageView
+            android:id="@+id/imgPerfilChat"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:contentDescription="Perfil Suporte"
+            app:srcCompat="@drawable/perfil"
+            app:tint="@color/verde_app" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvNomeAtendente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Luna"
+                android:textColor="@color/texto_app"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvStatusOnline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="online agora"
+                android:textColor="@color/verde_app"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- LISTA DE MENSAGENS -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerChat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:padding="12dp"
+        app:layout_constraintBottom_toTopOf="@id/layoutInputChat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarChat" />
+
+    <!-- BARRA INFERIOR DE DIGITAÇÃO -->
+    <LinearLayout
+        android:id="@+id/layoutInputChat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#121212"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnAnexoChat"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Anexo"
+            android:scaleType="fitCenter"
+            app:srcCompat="@android:drawable/ic_menu_add"
+            app:tint="@color/verde_app" />
+
+        <EditText
+            android:id="@+id/etMensagemChat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="Digite uma mensagem..."
+            android:inputType="textMultiLine"
+            android:maxLines="4"
+            android:textColor="@color/texto_app"
+            android:textColorHint="#888888"
+            android:textSize="15sp" />
+
+        <ImageButton
+            android:id="@+id/btnEnviarChat"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Enviar"
+            android:scaleType="fitCenter"
+            app:srcCompat="@android:drawable/ic_menu_send"
+            app:tint="@color/verde_app" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

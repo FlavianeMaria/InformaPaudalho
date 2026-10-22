@@ -1,9 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CadastroActivity">
+    android:background="@color/fundo_app"
+    android:fillViewport="true"
+    android:contentDescription="@string/tela_de_cadastro"
+    tools:context="CadastroActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:gravity="center">
+
+        <!-- Campo Nome -->
+        <EditText
+            android:id="@+id/edtNomeCadastro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:autofillHints="name"
+            android:background="#FFFFFF"
+            android:textColor="#000000"
+            android:textColorHint="#757575"
+            android:hint="@string/nome_completo"
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            tools:ignore="TextContrastCheck"/>
+
+        <!-- Campo E-mail -->
+        <EditText
+            android:id="@+id/edtEmailCadastro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:autofillHints="emailAddress"
+            android:background="#FFFFFF"
+            android:textColor="#000000"
+            android:textColorHint="#595959"
+            android:hint="@string/e_maill"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            tools:ignore="TextContrastCheck" />
+
+        <!-- Campo Senha -->
+        <EditText
+            android:id="@+id/edtSenhaCadastro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/senhaa"
+            android:inputType="textPassword"
+            android:background="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:autofillHints="password" />
+
+        <!-- Campo Confirmar Senha -->
+        <EditText
+            android:id="@+id/edtConfirmarSenhaCadastro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/confirmar_senha"
+            android:inputType="textPassword"
+            android:background="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:autofillHints="password" />
+
+        <!-- Botão Cadastrar -->
+        <Button
+            android:id="@+id/btnCadastrar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/cadastrar"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Botão Voltar ao Login -->
+        <Button
+            android:id="@+id/btnVoltarLogin"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/j_tem_uma_conta_fa_a_login"
+            style="?android:attr/borderlessButtonStyle"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+</ScrollView>

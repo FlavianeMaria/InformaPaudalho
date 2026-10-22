@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -7,109 +6,134 @@
     android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fundo_app"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
-    <!-- LOGO -->
+    <!-- BARRA SUPERIOR -->
     <ImageButton
         android:id="@+id/imageButtonLogo"
-        android:layout_width="57dp"
+        android:layout_width="48dp"
         android:layout_height="48dp"
-        android:minWidth="48dp"
-        android:minHeight="48dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
         android:background="@android:color/transparent"
-        android:contentDescription="@string/logo"
+        android:contentDescription="@string/logoo"
         android:scaleType="fitCenter"
+        app:tint="@color/verde_app"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/bara" />
 
-    <!-- TÍTULO -->
-
-    <!-- ÁGUA -->
-
     <TextView
         android:id="@+id/titulo"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:scaleType="fitCenter"
-        android:text="@string/informa_paudalho"
-        android:textColor="#1177C8"
-        android:textSize="22sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/informa_paudalhoo"
+        android:textColor="@color/texto_app"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/imageButtonLogo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toStartOf="@id/buttonChecklist"
         app:layout_constraintStart_toEndOf="@id/imageButtonLogo"
-        app:layout_constraintTop_toTopOf="@id/imageButtonLogo"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="@id/imageButtonLogo" />
 
     <ImageButton
-        android:id="@+id/buttonAgua"
-        android:layout_width="112dp"
-        android:layout_height="98dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="112dp"
+        android:id="@+id/buttonChecklist"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="4dp"
         android:background="@android:color/transparent"
-        android:contentDescription="@string/botao_agua"
+        android:contentDescription="@string/checklist"
         android:scaleType="fitCenter"
+        app:tint="@color/verde_app"
+        app:layout_constraintEnd_toStartOf="@id/buttonPerfil"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/checklist" />
+
+    <ImageButton
+        android:id="@+id/buttonPerfil"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/perfill"
+        android:scaleType="fitCenter"
+        app:tint="@color/verde_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/perfil" />
+
+    <!-- LINHA 1: ÁGUA E CARRO DA SOPA -->
+    <ImageButton
+        android:id="@+id/buttonAgua"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/bot_o_gua"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@id/buttonCarroSopa"
+        app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageButtonLogo"
-        app:srcCompat="@drawable/agua" />
+        app:srcCompat="@drawable/agua"
+        app:tint="@color/verde_app" />
 
     <TextView
         android:id="@+id/textAgua"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:importantForAcessibility="no"
-        android:layout_marginTop="12dp"
-        android:text="@string/agua"
-        android:textColor="#0D47A1"
+        android:layout_marginTop="8dp"
+        android:text="@string/gua"
+        android:textColor="@color/verde_app"
         android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/buttonAgua"
         app:layout_constraintStart_toStartOf="@id/buttonAgua"
         app:layout_constraintTop_toBottomOf="@id/buttonAgua" />
 
-    <!-- CARRO DA SOPA -->
-
     <ImageButton
         android:id="@+id/buttonCarroSopa"
-        android:layout_width="133dp"
-        android:layout_height="92dp"
-        android:layout_marginTop="116dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
         android:background="@android:color/transparent"
-        android:contentDescription="@string/botao_carro_da_sopa"
+        android:contentDescription="@string/bot_o_carro_da_sopa"
         android:scaleType="fitCenter"
+        app:tint="@color/verde_app"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageButtonLogo"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/buttonAgua"
+        app:layout_constraintTop_toTopOf="@id/buttonAgua"
         app:srcCompat="@drawable/sopa" />
 
     <TextView
         android:id="@+id/textCarroSopa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="@string/carro_da_sopa"
-        android:textColor="#0D47A1"
+        android:layout_marginTop="8dp"
+        android:text="@string/carro_da_sopaa"
+        android:textColor="@color/verde_app"
         android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/buttonCarroSopa"
         app:layout_constraintStart_toStartOf="@id/buttonCarroSopa"
         app:layout_constraintTop_toBottomOf="@id/buttonCarroSopa" />
 
-    <!-- RECICLAGEM -->
+    <!-- LINHA 2: RECICLAGEM E CHAT -->
     <ImageButton
         android:id="@+id/buttonReciclagem"
-        android:layout_width="114dp"
-        android:layout_height="90dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
         android:background="@android:color/transparent"
-        android:contentDescription="@string/botao_reciclagem"
+        android:contentDescription="@string/bot_o_reciclagem"
         android:scaleType="fitCenter"
+        app:tint="@color/verde_app"
+        app:layout_constraintEnd_toStartOf="@id/buttonChat"
+        app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textAgua"
         app:srcCompat="@drawable/reciclaguem" />
@@ -118,111 +142,99 @@
         android:id="@+id/textReciclagem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="@string/reciclagem"
-        android:textColor="#0D47A1"
+        android:layout_marginTop="8dp"
+        android:text="@string/reciclagemm"
+        android:textColor="@color/verde_app"
         android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/buttonReciclagem"
         app:layout_constraintStart_toStartOf="@id/buttonReciclagem"
         app:layout_constraintTop_toBottomOf="@id/buttonReciclagem" />
 
-    <!-- CHAT -->
     <ImageButton
         android:id="@+id/buttonChat"
-        android:layout_width="134dp"
-        android:layout_height="83dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
         android:background="@android:color/transparent"
-        android:contentDescription="@string/botao_chat"
+        android:contentDescription="@string/bot_o_chat"
         android:scaleType="fitCenter"
+        app:tint="@color/verde_app"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textCarroSopa"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/buttonReciclagem"
+        app:layout_constraintTop_toTopOf="@id/buttonReciclagem"
         app:srcCompat="@drawable/chat" />
 
     <TextView
         android:id="@+id/textChat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="@string/chat"
-        android:textColor="#0D47A1"
+        android:layout_marginTop="8dp"
+        android:text="@string/chatt"
+        android:textColor="@color/verde_app"
         android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/buttonChat"
         app:layout_constraintStart_toStartOf="@id/buttonChat"
         app:layout_constraintTop_toBottomOf="@id/buttonChat" />
 
-    <!-- CAMINHADA/COLETA DE LIXO -->
+    <!-- LINHA 3: COLETA DE LIXO E CASTRAÇÃO MÓVEL -->
     <ImageButton
-        android:id="@+id/buttonCaminhadaLixo"
-        android:layout_width="130dp"
-        android:layout_height="101dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
+        android:id="@+id/buttonColetaLixo"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
         android:background="@android:color/transparent"
-        android:contentDescription="@string/botao_coleta_de_lixo"
+        android:contentDescription="@string/bot_o_coleta_de_lixo"
         android:scaleType="fitCenter"
+        app:tint="@color/verde_app"
+        app:layout_constraintEnd_toStartOf="@id/buttonCastraMovel"
+        app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textReciclagem"
         app:srcCompat="@drawable/caminhadolixo" />
 
-    <!-- CASTRAÇÃO MÓVEL -->
-
-    <!--perfiu-->
+    <TextView
+        android:id="@+id/carredolixo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/coleta_do_lixo"
+        android:textColor="@color/verde_app"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/buttonColetaLixo"
+        app:layout_constraintStart_toStartOf="@id/buttonColetaLixo"
+        app:layout_constraintTop_toBottomOf="@id/buttonColetaLixo" />
 
     <ImageButton
         android:id="@+id/buttonCastraMovel"
-        android:layout_width="136dp"
-        android:layout_height="101dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
         android:background="@android:color/transparent"
-        android:contentDescription="@string/botao_castramovel"
+        android:contentDescription="@string/bot_o_castram_vel"
         android:scaleType="fitCenter"
+        app:tint="@color/verde_app"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textChat"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/buttonColetaLixo"
+        app:layout_constraintTop_toTopOf="@id/buttonColetaLixo"
         app:srcCompat="@drawable/castramovel" />
-
-    <ImageButton
-        android:id="@+id/buttonperfil"
-        android:layout_width="64dp"
-        android:layout_height="48dp"
-        android:minWidth="48dp"
-        android:minHeight="48dp"
-        android:layout_marginStart="12dp"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/perfil"
-        android:scaleType="fitCenter"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/titulo"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageButtonLogo"
-        app:srcCompat="@drawable/perfiu"
-        tools:layout_editor_absoluteY="4dp" />
-
-    <TextView
-        android:id="@+id/carrodolixo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="40dp"
-        android:text="@string/coleta_de_lixo"
-        android:textColor="#0D47A1"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonColetaLixo" />
 
     <TextView
         android:id="@+id/castramovel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="32dp"
-        android:text="@string/castramovel"
-        android:textColor="#0D47A1"
+        android:layout_marginTop="8dp"
+        android:text="@string/castram_vel"
+        android:textColor="@color/verde_app"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonCastraMovel" />
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/buttonCastraMovel"
+        app:layout_constraintStart_toStartOf="@id/buttonCastraMovel"
+        app:layout_constraintTop_toBottomOf="@id/buttonCastraMovel" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-

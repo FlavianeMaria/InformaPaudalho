@@ -1,131 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EDF6FA"
-    android:backgroundTint="#DFE6EC"
-    android:outlineAmbientShadowColor="#F1E7E7"
-    android:outlineSpotShadowColor="#FAEDED"
+    android:background="@color/fundo_app"
+    android:fillViewport="true"
+    android:contentDescription="@string/tela_de_login"
     tools:context=".LoginActivity">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="280dp"
-        android:layout_height="48dp"
-        android:text="@string/login"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2"
-        app:layout_constraintVertical_bias="0.3" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="331dp"
-        android:layout_height="46dp"
-        android:text="    Informa Paudalho"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
-        android:text="Seja bem-vindo"
-        android:textSize="34sp"
-        android:textStyle="italic"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        tools:visibility="visible" />
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:gravity="center">
 
-    <EditText
-        android:id="@+id/caixadeemaillog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:layout_marginTop="100dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:hint="@string/email"
-        android:autofillHints="emailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.472"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        <!-- Logo do Aplicativo -->
+        <ImageView
+            android:id="@+id/imgLogoLogin"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/informapaudalho"
+            android:contentDescription="@null"
+            android:layout_marginBottom="40dp" />
 
-    <EditText
-        android:id="@+id/editTextTextPassword2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:layout_marginTop="60dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:autofillHints="password"
-        android:hint="Senha"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/caixadeemaillog" />
+        <!-- Campo de E-mail -->
+        <EditText
+            android:id="@+id/edtEmailLogin"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="@string/digite_o_seu_e_mail"
+            android:inputType="textEmailAddress"
+            android:background="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:autofillHints="emailAddress" />
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="196dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="44dp"
-        android:text="Não tem uma conta"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        <!-- Campo de Senha -->
+        <EditText
+            android:id="@+id/edtSenhaLogin"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="@string/digite_a_sua_senha"
+            android:inputType="textPassword"
+            android:background="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginBottom="32dp"
+            android:autofillHints="password" />
 
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/password"
-        android:textSize="20sp"
-        android:labelFor="@id/editTextTextPassword2"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPassword2"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/editTextTextPassword2"
-        tools:layout_editor_absoluteY="388dp" />
+        <!-- Botão Principal de Login -->
+        <Button
+            android:id="@+id/btnEntrar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/login"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp" />
 
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/email"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/caixadeemaillog"
-        app:layout_constraintHorizontal_bias="0.848"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/caixadeemaillog"
-        tools:layout_editor_absoluteY="276dp" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="@string/cadastre_se"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_bias="0.589"
-        tools:layout_editor_absoluteX="136dp"
-        />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Botão para Tela de Cadastro -->
+        <Button
+            android:id="@+id/btnIrParaCadastro"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/n_o_tem_cadastro"
+            style="?android:attr/borderlessButtonStyle"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</ScrollView>

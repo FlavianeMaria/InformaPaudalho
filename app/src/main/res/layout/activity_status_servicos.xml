@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fundo_app"
+    tools:context=".ChecklistActivity">
+
+    <!-- BARRA SUPERIOR (TOOLBAR) -->
+    <LinearLayout
+        android:id="@+id/toolbarChecklist"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#121212"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnVoltarChecklist"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Voltar"
+            app:srcCompat="@android:drawable/ic_menu_revert"
+            app:tint="@color/verde_app" />
+
+        <TextView
+            android:id="@+id/tvTituloChecklist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:text="Checklist Comunitário"
+            android:textColor="@color/texto_app"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- LISTA DE CHECKBOXES DENTRO DE UM SCROLLVIEW -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarChecklist">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Acompanhe a chegada dos serviços hoje:"
+                android:textColor="@color/verde_app"
+                android:textSize="14sp" />
+
+            <!-- ITENS DO CHECKLIST -->
+            <CheckBox
+                android:id="@+id/cbCarroLixo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:buttonTint="@color/verde_app"
+                android:checked="true"
+                android:text="Carro do lixo passou"
+                android:textColor="@color/texto_app"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/cbCarroSopa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:buttonTint="@color/verde_app"
+                android:text="Carro da sopa está no lugar"
+                android:textColor="@color/texto_app"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/cbCastramovel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:buttonTint="@color/verde_app"
+                android:text="Castramóvel está no lugar"
+                android:textColor="@color/texto_app"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/cbAgua"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:buttonTint="@color/verde_app"
+                android:text="A água chegou"
+                android:textColor="@color/texto_app"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/cbReciclagem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:buttonTint="@color/verde_app"
+                android:text="Coleta seletiva concluída"
+                android:textColor="@color/texto_app"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/cbIluminacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:buttonTint="@color/verde_app"
+                android:text="Manutenção de iluminação realizada"
+                android:textColor="@color/texto_app"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
