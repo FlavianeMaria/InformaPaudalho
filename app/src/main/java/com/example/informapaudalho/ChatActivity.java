@@ -1,5 +1,5 @@
 package com.example.informapaudalho;
-
+import com.example.informapaudalho.R;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
